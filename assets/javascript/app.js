@@ -1,10 +1,12 @@
 clockRunning = false;
+var countdown;
 // timer that starts at the start of the game and ends the game
 function clockstart(t){
     clockRunning = true;
     createQuestions()
-    var countdown = 60;
+    countdown = setTimeout(count, 60000)
     countdown--;
+
     $("#timeRemain").text(countdown)
     if (countdown===0){
         gamestop()
@@ -12,6 +14,7 @@ function clockstart(t){
 }
 // series of questions with a multipule choice or true false answers where they can only pick one answer 
 function createQuestions(){
+
     // question list  in random order
     // coordinating answers in random order  
 }
