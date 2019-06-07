@@ -1,16 +1,27 @@
 clockRunning = false;
+var number = 10;
 var countdown;
 // timer that starts at the start of the game and ends the game
-function clockstart(t){
+function clockstart(){
+    clearInterval(countdown);
     clockRunning = true;
-    createQuestions()
-    countdown = setTimeout(count, 60000)
-    countdown--;
+    createQuestions();
+    countdown = setInterval(decrement, 1000);
+console.log(countdown)
+}
 
-    $("#timeRemain").text(countdown)
-    if (countdown===0){
+function decrement(){
+    number--;
+    $("#timeRemain").html("<h2>" + number + "</h2>")
+    if (number === 0){
         gamestop()
     }
+}
+
+function gamestop(){
+    alert("Times UP!");
+    clearInterval(countdown);
+    answerReveal();
 }
 // series of questions with a multipule choice or true false answers where they can only pick one answer 
 function createQuestions(){
@@ -19,12 +30,8 @@ function createQuestions(){
     // coordinating answers in random order  
 }
 // click event to record useranswer only one answer
-$("#answer").on("click")
+// $("#answer").on("click")
 
-function gamestop(){
-    alert("Times UP!")
-    answerReveal()
-}
 
 // at the end of the game reveal the number of questions that players answer correctly and incorrectly 
 function answerReveal(){
