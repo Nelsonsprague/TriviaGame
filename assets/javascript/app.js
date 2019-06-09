@@ -26,43 +26,51 @@ function gamestop(){
     showResults();
 }
 // series of questions with a multipule choice or true false answers where they can only pick one answer 
+
+var myQuestions = [
+    {question: "Who is the strongest?",
+    answers:{
+        a: "Superman",
+        b: "The Terminator",
+        c: "Waluigi"
+    },
+    correctAnswer: "c"
+},
+{question: "Who is the strongest?",
+answers:{
+    a: "Superman",
+    b: "The Terminator",
+    c: "Waluigi"
+},
+correctAnswer: "c"
+},
+{question: "Who is the strongest?",
+answers:{
+    a: "Superman",
+    b: "The Terminator",
+    c: "Waluigi"
+},
+correctAnswer: "c"
+},
+];
+
+$("#answer").on("click")
+
 function createTrivia(){
     $("#trivia").empty();
+    for(var i = 0; i < myQuestions.length; i++){
+        console.log(myQuestions[i])
+    
+        var a = $("<p>");
+        a.addClass("question");
+        a.attr("data-name", myQuestions[i]);
+        a.text(myQuestions[i]);
+        $("#trivia").append(a);
+    }
 }
 
-                // var myQuestions = [
-                //     {question: "Who is the strongest?",
-                // answers:{
-                //     a: "Superman",
-                //     b: "The Terminator",
-                //     c: "Waluigi"
-                // },
-                //   correctAnswer: "c"
-                // },
-                // {question: "Who is the strongest?",
-                // answers:{
-                //     a: "Superman",
-                //     b: "The Terminator",
-                //     c: "Waluigi"
-                // },
-                //   correctAnswer: "c"
-                // },
-                // {question: "Who is the strongest?",
-                // answers:{
-                //     a: "Superman",
-                //     b: "The Terminator",
-                //     c: "Waluigi"
-                // },
-                //   correctAnswer: "c"
-                // },
-                // ];
-                //      for(var i = 0; i < myQuestions.length; i++){
-                //          console.log(myQuestions[i])
-                //      }
-// $("#answer").on("click")
-
-
 // at the end of the game reveal the number of questions that players answer correctly and incorrectly 
+
 function showResults(){
     //show correct answer vs user answer
 }
