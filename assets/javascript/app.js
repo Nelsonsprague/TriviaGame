@@ -64,7 +64,7 @@ function createTrivia(){
         var a = $("<p>");
         a.addClass("question");
         a.attr("data-name", myQuestions[i]);
-        a.text(myQuestions[i]);
+        a.text(JSON.stringify(myQuestions[i]));
         $("#trivia").append(a);
     }
 }
@@ -73,5 +73,15 @@ function createTrivia(){
 
 function showResults(){
     //show correct answer vs user answer
+    $("#trivia").empty();
+    for(var i = 0; i < myQuestions.length; i++){
+        console.log(myQuestions[i])
+    
+        var a = $("<p>");
+        a.addClass("question");
+        a.attr("data-name", myQuestions[i]);
+        a.text(JSON.stringify(myQuestions[i]));
+        $("#trivia").append(a);
+    }
 }
 clockstart();
