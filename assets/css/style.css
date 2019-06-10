@@ -4,3 +4,7 @@ body{
 div{
     margin: auto;
 }
+
+button{
+    margin: 15px;
+}
