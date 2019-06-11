@@ -1,5 +1,5 @@
 clockRunning = false;
-var number = 10;
+var number = 100;
 var countdown;
 var userScore = 0;
 var userWrong = 0;
@@ -32,29 +32,95 @@ function gamestop(){
 // series of questions with a multipule choice or true false answers where they can only pick one answer 
 
 var myQuestions = [
-    {question: "Who is the strongest?",
+    {question: "1) What character said 'Live Long and Prosper?",
     answers:{
         a: "Superman",
         b: "The Terminator",
-        c: "Waluigi"
+        c: "Spock",
+        d: "Batman"
     },
-    correctAnswer: "Waluigi"
+    correctAnswer: "Spock"
 },
-{question: "Who is the strongest?",
+{question: "2) What is the name of Batman's butler?",
 answers:{
-    a: "Superman",
-    b: "The Terminator",
-    c: "Waluigi"
+    a: "Alfred",
+    b: "James",
+    c: "Fred",
+    d: "George"
 },
-correctAnswer: "Waluigi"
+correctAnswer: "Alfred"
 },
-{question: "Who is the strongest?",
+{question: "3) What city is Jim Morrison buried in?",
 answers:{
-    a: "Superman",
-    b: "The Terminator",
-    c: "Waluigi"
+    a: "New York",
+    b: "L. A.",
+    c: "London",
+    d: "Paris"
 },
-correctAnswer: "Waluigi"
+correctAnswer: "Paris"
+},
+{question: "4) What is the name of Jack Skellington's pet dog?",
+answers:{
+    a: "Lil Jack",
+    b: "Frank",
+    c: "Squee",
+    d: "Zero"
+},
+correctAnswer: "Zero"
+},
+{question: "5) Which Roman emperor supposedly fiddled while Rome burned?",
+answers:{
+    a: "Tiberius",
+    b: "Augustus",
+    c: "Nero",
+    d: "Otho"
+},
+correctAnswer: "Nero"
+},
+{question: "6) What is the total number of dots on a pair of dice?",
+answers:{
+    a: "21",
+    b: "42",
+    c: "34",
+    d: "41"
+},
+correctAnswer: "42"
+},
+{question: "7) Which artist said they would eat thier wife when she died?",
+answers:{
+    a: "Dali",
+    b: "Monet",
+    c: "Picasso",
+    d: "Pollock"
+},
+correctAnswer: "Dali"
+},
+{question: "8) Where is the smallest bone in the body?",
+answers:{
+    a: "Nose",
+    b: "Foot",
+    c: "Ear",
+    d: "Hand"
+},
+correctAnswer: "Ear"
+},
+{question: "9) Who lived at 221B, Baker Street, London?",
+answers:{
+    a: "Dracula",
+    b: "Dr. Jeckel",
+    c: "Sherlock Holmes",
+    d: "Ebenezer Scrooge"
+},
+correctAnswer: "Sherlock Holmes"
+},
+{question: "10) According to Greek Mythology who was the first woman on earth?",
+answers:{
+    a: "Helen",
+    b: "Fred",
+    c: "Pandora",
+    d: "Penelope"
+},
+correctAnswer: "Pandora"
 },
 ];
 
@@ -84,6 +150,11 @@ function createTrivia(){
         c.addClass("answer")
         c.text(myQuestions[i].answers.c);
         $("#trivia").append(c);
+
+        var d = $("<button id =' " + i + "d'>")
+        d.addClass("answer")
+        d.text(myQuestions[i].answers.d);
+        $("#trivia").append(d);
     }
 }
 
