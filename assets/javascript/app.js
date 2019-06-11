@@ -1,10 +1,11 @@
 clockRunning = false;
-var number = 100;
+var number = 60;
 var countdown;
 var userScore = 0;
 var userWrong = 0;
 var userAnswer = [];
 var questionIndex = 0;
+var clicked = true;
 
 var resultsContain = document.getElementById('results');
 // timer that starts at the start of the game and ends the game
@@ -168,6 +169,7 @@ $("#trivia").on("click", "button", function(){
     userAnswer.push($(this).text());
     console.log(userAnswer);
     questionIndex ++;
+
 })
 function giveResults(){
 //show correct answer vs user answer
