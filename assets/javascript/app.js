@@ -174,6 +174,10 @@ $("#trivia").on("click", "button", function(){
     
 })
 
+$(".submit").on("click", function(){
+    gamestop();
+})
+
 function giveResults(){
 //show correct answer vs user answer
 for(i = 0; i<myQuestions.length; i++){

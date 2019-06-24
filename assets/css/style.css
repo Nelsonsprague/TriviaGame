@@ -14,3 +14,9 @@ button{
 .answer:focus{
     background-color: blueviolet;
 }
+
+.submit{
+    display: flex; 
+    justify-content: center;  
+    margin: 20px;
+}
