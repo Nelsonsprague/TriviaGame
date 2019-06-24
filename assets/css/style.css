@@ -8,3 +8,9 @@ div{
 button{
     margin: 15px;
 }
+.answer:active{
+    background-color: blue;
+}
+.answer:focus{
+    background-color: blueviolet;
+}

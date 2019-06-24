@@ -5,7 +5,7 @@ var userScore = 0;
 var userWrong = 0;
 var userAnswer = [];
 var questionIndex = 0;
-var clicked = true;
+var count = 0;
 
 var resultsContain = document.getElementById('results');
 // timer that starts at the start of the game and ends the game
@@ -166,11 +166,14 @@ function createTrivia(){
 clockstart();
 
 $("#trivia").on("click", "button", function(){
-    userAnswer.push($(this).text());
-    console.log(userAnswer);
-    questionIndex ++;
-
+    
+        userAnswer.push($(this).text());
+        console.log(userAnswer);
+        questionIndex ++;
+        count=1;
+    
 })
+
 function giveResults(){
 //show correct answer vs user answer
 for(i = 0; i<myQuestions.length; i++){
